@@ -1,0 +1,43 @@
+public class PizzaStore{
+	SimplePizzaFactory factory;
+	
+	PizzaStore{(SimplePizzaFactory factory){
+		this.factory = factory;
+	}
+	
+	public Pizza orderPizza(String type){
+		Pizza pizza;
+		
+		pizza = factory.createPizza(String type);
+		pizza.prepare();
+		pizza.bake();
+		pizza.cut();
+		pizza.box();
+	}
+	
+	
+}
+
+public class SimplePizzaFactory{
+	public Pizza createPizza(String type){
+	Pizza pizza = null;
+	
+	if(type.equals("Cheese"){
+		pizza = new CheesePizza();
+	}
+	return pizza;
+ }
+
+}
+
+public class Pizza{
+	prepare();
+	bake();
+	cut();
+}
+
+public class CheesePizza extends Pizza{
+	prepare();
+	bake();
+	cut();
+}
