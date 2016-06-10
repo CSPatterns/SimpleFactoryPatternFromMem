@@ -33,9 +33,15 @@ public class SimplePizzaFactory{
 }
 
 public class Pizza{
+	String name;
+	String dough;
+	String sauce;
+	ArrayList<String> toppings = new ArrayList<String>();
+	
 	prepare();
 	bake();
 	cut();
+	box();
 }
 
 public class CheesePizza extends Pizza{
